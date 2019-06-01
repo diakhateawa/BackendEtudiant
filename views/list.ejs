@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>etudiants</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+	h1{
+		text-align: center;
+	}
+</style>
+<body class="container">
+	<h1>Liste des etudiants</h1>
+	<a class="btn btn-primary" href='/etudiants/new'>Ajouter un nouveau etudiant</a><hr>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<td>Nom</td>
+				<td>Prenom</td>
+				<td>Adresse</td>
+				<td>Telephone</td>
+				<td>Email</td>
+				
+			<tr>
+		</thead>
+		<tbody>
+			<% for(var i=0; i<list.length; i++){ %>
+				<tr>
+					<td><%=	list[i].nom %></td>
+					<td><%= list[i].prenom %> </td>
+					<td><%= list[i].adresse %> </td>
+					<td><%=	list[i].telephone %></td>
+					<td><%=	list[i].email %></td>
+				</tr>
+			<%}%>
+		</tbody>
+	</table>
+</body>
+</html>
